@@ -1,56 +1,52 @@
-var add = require('./calculator.js');
-var added = add.add;
-var multiply = require('./calculator.js');
-var multiples = multiply.multiply;
-var manyMultiples = require('./calculator.js');
-var moreMultiples = manyMultiples.manyMultiples;
+const Calculator = require('./calculator.js');
+
 
 it('should return zero', function(){
 
     
+    var calculator = new Calculator();
     
     
-    
-    expect(added(0,0)).toBe(0)
+    expect(calculator.add(0,0)).toBe(0)
 });
 
 it('should return negative number', function(){
 
-   
+    var calculator = new Calculator();
 
-    expect(added(-1,-1)).toBe(-2)
+    expect(calculator.add(-1,-1)).toBe(-2)
 
 });
 
 it('should return sum of two numbers', function(){
 
-    
+    var calculator = new Calculator();
 
-    expect(added(4,5)).toBe(9)
+    expect(calculator.add(4,5)).toBe(9)
 
 });
 
 it('can add multiple numbers', function(){
 
-    
+    var calculator = new Calculator();
 
-    expect(added(1,2,3,4)).toBe(10)
+    expect(calculator.add(1,2,3,4)).toBe(10)
 
 });
 
 it('should return sum of two multiples', function(){
 
-    
+    var calculator = new Calculator();
 
-    expect(multiples(1,2)).toBe(2)
+    expect(calculator.multiply(1,2)).toBe(2)
 
 });
 
 it('should return sum of four multiples', function(){
 
+    var calculator = new Calculator(); 
     
-    
-    expect(moreMultiples(1,2,3,4)).toBe(24)
+    expect(calculator.multiply(1,2,3,4)).toBe(24)
 
 });
 
