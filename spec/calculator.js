@@ -6,7 +6,7 @@ constructor(){
     // this.numTwo=0;
     // this.numThree;
     // this.numFour;
-    // this.sum = 0;
+    // this.sum1 = 0;
 
 
 }
