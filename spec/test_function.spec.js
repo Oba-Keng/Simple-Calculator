@@ -1,61 +1,39 @@
-const Calculator = require('./calculator.js');
+const Calculator = require("./calculator.js");
 
-
-it('should return zero', function(){
-
-    
-    var calculator = new Calculator();
-    
-    
-    expect(calculator.add(0,0)).toBe(0)
-});
-
-it('should return negative number', function(){
-
+describe("a simple calculator that", function() {
+  it("should return zero", function() {
     var calculator = new Calculator();
 
-    expect(calculator.add(-1,-1)).toBe(-2)
+    expect(calculator.add(0, 0)).toBe(0);
+  });
 
-});
-
-it('should return sum of two numbers', function(){
-
+  it("should return negative number", function() {
     var calculator = new Calculator();
 
-    expect(calculator.add(4,5)).toBe(9)
+    expect(calculator.add(-1, -1)).toBe(-2);
+  });
 
-});
-
-it('can add multiple numbers', function(){
-
+  it("should return sum of two numbers", function() {
     var calculator = new Calculator();
 
-    expect(calculator.add(1,2,3,4)).toBe(10)
+    expect(calculator.add(4, 5)).toBe(9);
+  });
 
-});
-
-it('should return sum of two multiples', function(){
-
+  it("can add multiple numbers", function() {
     var calculator = new Calculator();
 
-    expect(calculator.multiply(1,2)).toBe(2)
+    expect(calculator.add(1, 2, 3, 4)).toBe(10);
+  });
 
+  it("should return sum of two multiples", function() {
+    var calculator = new Calculator();
+
+    expect(calculator.multiply(1, 2)).toBe(2);
+  });
+
+  it("should return sum of four multiples", function() {
+    var calculator = new Calculator();
+
+    expect(calculator.multiply(1, 2, 3, 4)).toBe(24);
+  });
 });
-
-it('should return sum of four multiples', function(){
-
-    var calculator = new Calculator(); 
-    
-    expect(calculator.multiply(1,2,3,4)).toBe(24)
-
-});
-
-
-
-
-
-
-
-
-
-
